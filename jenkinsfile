@@ -9,11 +9,11 @@ pipeline {
         }
         stage('buildsonar_analysis') {
             steps {
-               ./mvnw clean verify sonar:sonar \
-                   Dsonar.login=95ddcf6a5af55375640c0df507f4d176733d48a6 \
-                   Dsonar.host.url=https://sonarcloud.io \
-                   Dsonar.organization=qtraju123 \
-                   Dsonar.projectKey=qtraju123
+               './mvnw clean verify sonar:sonar \
+                  -Dsonar.login=95ddcf6a5af55375640c0df507f4d176733d48a6 \
+                  -Dsonar.host.url=https://sonarcloud.io \
+                  -Dsonar.organization=qtraju123 \
+                  -Dsonar.projectKey=qtraju123'
             }
         }
     }
